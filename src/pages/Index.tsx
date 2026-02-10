@@ -353,11 +353,13 @@ const Index = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-3">Контакты</h4>
-              <a href="https://t.me/voroshilinaella" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary transition-colors mb-2">
-                Telegram: @voroshilinaella
+              <a href="https://t.me/voroshilinaella" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-2">
+                <Icon name="Send" size={20} />
+                <span>Telegram: @voroshilinaella</span>
               </a>
-              <a href="mailto:voroshilina.ru@gmail.com" className="block text-muted-foreground hover:text-primary transition-colors">
-                Email: voroshilina.ru@gmail.com
+              <a href="mailto:voroshilina.ru@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <Icon name="Mail" size={20} />
+                <span>Email: voroshilina.ru@gmail.com</span>
               </a>
             </div>
             <div>
