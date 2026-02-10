@@ -353,8 +353,12 @@ const Index = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-3">Контакты</h4>
-              <p className="text-muted-foreground">Telegram: @portal_support</p>
-              <p className="text-muted-foreground">Email: hello@portal.ru</p>
+              <a href="https://t.me/voroshilinaella" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary transition-colors mb-2">
+                Telegram: @voroshilinaella
+              </a>
+              <a href="mailto:voroshilina.ru@gmail.com" className="block text-muted-foreground hover:text-primary transition-colors">
+                Email: voroshilina.ru@gmail.com
+              </a>
             </div>
             <div>
               <h4 className="font-semibold mb-3">Дата</h4>
