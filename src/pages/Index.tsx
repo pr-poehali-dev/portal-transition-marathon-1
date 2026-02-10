@@ -108,9 +108,9 @@ const Index = () => {
               <button onClick={() => scrollToSection('program')} className="hover:text-primary transition-colors">Программа</button>
               <button onClick={() => scrollToSection('authors')} className="hover:text-primary transition-colors">Авторы</button>
               <button onClick={() => scrollToSection('testimonials')} className="hover:text-primary transition-colors">Отзывы</button>
-              <button onClick={() => scrollToSection('registration')} className="hover:text-primary transition-colors">Регистрация</button>
+
             </div>
-            <Button onClick={() => scrollToSection('registration')} className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button onClick={() => window.open('https://t.me/+X_fIDkDLb3EzNzBi', '_blank')} className="bg-primary text-primary-foreground hover:bg-primary/90">
               Хочу участвовать
             </Button>
           </div>
@@ -155,7 +155,7 @@ const Index = () => {
           <Button 
             size="lg" 
             className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90"
-            onClick={() => scrollToSection('registration')}
+            onClick={() => window.open('https://t.me/+X_fIDkDLb3EzNzBi', '_blank')}
           >
             Хочу участвовать
           </Button>
@@ -213,7 +213,7 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="mt-12 p-8 bg-secondary/20 rounded-lg text-center">
+          <div className="mt-12 p-8 bg-secondary/20 rounded-lg text-center border-4 border-[#FF2B2B]">
             <p className="text-lg">
               Без обещаний «лёгких изменений».<br />
               Но с реальным сдвигом состояния, который ощущается телом и решениями.
@@ -253,6 +253,14 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">ПОЧЕМУ С НАМИ</h2>
           
+          <div className="mb-12 flex justify-center">
+            <img 
+              src="https://cdn.poehali.dev/projects/abf352d4-79da-4b58-b2f2-a0469ff33b8a/bucket/a64d565b-6bb7-4384-8692-8b6ebddbd338.png" 
+              alt="Элла и Елена" 
+              className="rounded-lg shadow-xl max-w-2xl w-full"
+            />
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardContent className="p-8">
@@ -311,50 +319,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="registration" className="py-20 px-4">
-        <div className="container mx-auto max-w-2xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">РЕГИСТРАЦИЯ НА МАРАФОН</h2>
-            <p className="text-xl text-muted-foreground mb-4">
-              Формат: бесплатный онлайн-марафон • 5 дней • работа в Telegram
-            </p>
-            <p className="text-2xl font-bold text-primary">Старт: 12 февраля</p>
-          </div>
 
-          <Card>
-            <CardContent className="p-8">
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Ваше имя</label>
-                  <Input placeholder="Как к вам обращаться?" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <Input type="email" placeholder="your@email.com" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-2">Telegram</label>
-                  <Input placeholder="@username" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-2">Что сейчас главное для вас?</label>
-                  <Textarea 
-                    placeholder="Опишите кратко, что привело вас к марафону..."
-                    rows={4}
-                  />
-                </div>
-
-                <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                  Зарегистрироваться
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       <section className="py-20 px-4 bg-secondary text-secondary-foreground">
         <div className="container mx-auto max-w-4xl text-center">
@@ -372,7 +337,7 @@ const Index = () => {
             size="lg" 
             variant="outline"
             className="text-lg px-8 py-6 bg-background text-foreground border-2 border-background hover:bg-background/90"
-            onClick={() => scrollToSection('registration')}
+            onClick={() => window.open('https://t.me/+X_fIDkDLb3EzNzBi', '_blank')}
           >
             Хочу участвовать
           </Button>
