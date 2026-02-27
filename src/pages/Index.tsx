@@ -124,28 +124,32 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Nav */}
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold">🔮 ПОРТАЛ</div>
+            <div className="text-xl md:text-2xl font-bold">🔮 ПОРТАЛ</div>
             <div className="hidden md:flex gap-6">
               <button onClick={() => scrollToSection('about')} className="hover:text-primary transition-colors">О марафоне</button>
               <button onClick={() => scrollToSection('program')} className="hover:text-primary transition-colors">Программа</button>
               <button onClick={() => scrollToSection('authors')} className="hover:text-primary transition-colors">Авторы</button>
               <button onClick={() => scrollToSection('testimonials')} className="hover:text-primary transition-colors">Отзывы</button>
-
             </div>
-            <Button onClick={() => window.open('https://t.me/+X_fIDkDLb3EzNzBi', '_blank')} className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button
+              onClick={() => window.open('https://t.me/+X_fIDkDLb3EzNzBi', '_blank')}
+              className="text-sm px-3 py-2 md:text-base md:px-4 bg-primary text-primary-foreground hover:bg-primary/90"
+            >
               Хочу участвовать
             </Button>
           </div>
         </div>
       </nav>
 
-      <section className="pt-32 pb-20 px-4 bg-black text-white">
+      {/* Hero */}
+      <section className="pt-24 md:pt-32 pb-20 px-4 bg-black text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="text-6xl mb-6 animate-fade-in">🔮</div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-balance">
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 animate-fade-in text-balance">
             ПОРТАЛ
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/70 animate-fade-in delay-100 max-w-3xl mx-auto">
@@ -154,32 +158,32 @@ const Index = () => {
           <p className="text-lg md:text-xl mb-12 animate-fade-in delay-200 max-w-2xl mx-auto">
             Перестать застревать. Собрать себя. Понять, куда идти дальше.
           </p>
-          
+
           <div className="bg-secondary text-secondary-foreground rounded-lg p-8 mb-12 animate-fade-in delay-300">
             <p className="text-lg mb-6">До старта марафона осталось:</p>
             <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
               <div>
-                <div className="text-4xl font-bold text-primary">{timeLeft.days}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary">{timeLeft.days}</div>
                 <div className="text-sm mt-1">дней</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary">{timeLeft.hours}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary">{timeLeft.hours}</div>
                 <div className="text-sm mt-1">часов</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary">{timeLeft.minutes}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary">{timeLeft.minutes}</div>
                 <div className="text-sm mt-1">минут</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary">{timeLeft.seconds}</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary">{timeLeft.seconds}</div>
                 <div className="text-sm mt-1">секунд</div>
               </div>
             </div>
           </div>
 
-          <Button 
-            size="lg" 
-            className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90"
+          <Button
+            size="lg"
+            className="w-full md:w-auto text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90"
             onClick={() => window.open('https://t.me/+X_fIDkDLb3EzNzBi', '_blank')}
           >
             Хочу участвовать
@@ -187,11 +191,12 @@ const Index = () => {
         </div>
       </section>
 
+      {/* "Кому подойдёт" section */}
       <section id="about" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">КОМУ ПОДОЙДЁТ ЭТОТ МАРАФОН</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">КОМУ ПОДОЙДЁТ ЭТОТ МАРАФОН</h2>
           <p className="text-xl mb-8 text-center text-muted-foreground">Этот формат для вас, если вы:</p>
-          
+
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {[
               "эксперт, коуч, психолог, энергопрактик, наставник",
@@ -203,8 +208,8 @@ const Index = () => {
             ].map((item, index) => (
               <Card key={index} className="border-l-4 border-l-primary">
                 <CardContent className="p-6 flex items-start gap-4">
-                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={24} />
-                  <p className="text-lg">{item}</p>
+                  <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                  <p>{item}</p>
                 </CardContent>
               </Card>
             ))}
@@ -217,10 +222,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* "Какой результат" section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">КАКОЙ РЕЗУЛЬТАТ ВЫ ПОЛУЧИТЕ</h2>
-          
+          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">КАКОЙ РЕЗУЛЬТАТ ВЫ ПОЛУЧИТЕ</h2>
+
           <div className="space-y-6">
             {[
               "увидите реальную причину застревания, а не симптомы",
@@ -240,23 +246,24 @@ const Index = () => {
 
           <div className="mt-12 p-8 bg-secondary/20 rounded-lg text-center border-4 border-[#FF2B2B]">
             <p className="text-lg">
-              Без обещаний «лёгких изменений».<br />
+              Без обещаний «лёгких изменений».{' '}
               Но с реальным сдвигом состояния, который ощущается телом и решениями.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Program section */}
       <section id="program" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">ПРОГРАММА 24–25–26 МАРТА</h2>
-          
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">ПРОГРАММА 24–25–26 МАРТА</h2>
+
           <div className="space-y-8">
             {programDays.map((day, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="text-5xl">{day.emoji}</div>
+                <CardContent className="p-4 md:p-8">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 md:gap-6">
+                    <div className="text-4xl md:text-5xl">{day.emoji}</div>
                     <div className="flex-1">
                       <div className="text-sm font-semibold text-primary mb-1">{day.date}</div>
                       <h3 className="text-2xl font-bold mb-2">{day.title}</h3>
@@ -293,21 +300,22 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Authors section */}
       <section id="authors" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">ПОЧЕМУ С НАМИ</h2>
-          
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">ПОЧЕМУ С НАМИ</h2>
+
           <div className="mb-12 flex justify-center">
-            <img 
-              src="https://cdn.poehali.dev/projects/abf352d4-79da-4b58-b2f2-a0469ff33b8a/bucket/a64d565b-6bb7-4384-8692-8b6ebddbd338.png" 
-              alt="Элла и Елена" 
+            <img
+              src="https://cdn.poehali.dev/projects/abf352d4-79da-4b58-b2f2-a0469ff33b8a/bucket/a64d565b-6bb7-4384-8692-8b6ebddbd338.png"
+              alt="Элла и Елена"
               className="rounded-lg shadow-xl max-w-2xl w-full"
             />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 <h3 className="text-2xl font-bold mb-4">Элла</h3>
                 <p className="text-muted-foreground mb-4">
                   Целитель, энергопроводник, ченнеллер.
@@ -319,7 +327,7 @@ const Index = () => {
             </Card>
 
             <Card>
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 <h3 className="text-2xl font-bold mb-4">Елена</h3>
                 <p className="text-muted-foreground mb-4">
                   Мастер Рей Ки До Сатори, целитель, регрессолог.
@@ -338,11 +346,12 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials (screenshots) section */}
       <section id="testimonials" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">ОТЗЫВЫ УЧАСТНИКОВ</h2>
-          
-          <div className="grid md:grid-cols-3 gap-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">ОТЗЫВЫ УЧАСТНИКОВ</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               "https://cdn.poehali.dev/projects/abf352d4-79da-4b58-b2f2-a0469ff33b8a/bucket/e93cf2b8-1a52-4b9e-a393-d8e22bc601cf.png",
               "https://cdn.poehali.dev/projects/abf352d4-79da-4b58-b2f2-a0469ff33b8a/bucket/b1606b0a-b881-4faf-98d7-77e702f3a208.png",
@@ -356,24 +365,22 @@ const Index = () => {
         </div>
       </section>
 
-
-
+      {/* CTA section */}
       <section className="py-20 px-4 bg-secondary text-secondary-foreground">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8">
             ПОРТАЛ — для тех, кто уже прошёл часть пути
           </h2>
           <p className="text-xl mb-6">
             и оказался в точке, где по-старому больше не работает.
           </p>
           <p className="text-lg mb-12">
-            Если вы чувствуете застревание и готовы честно посмотреть на свой следующий шаг —<br />
-            ПОРТАЛ может стать началом этого перехода.
+            Если вы чувствуете застревание и готовы честно посмотреть на свой следующий шаг — ПОРТАЛ может стать началом этого перехода.
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             variant="outline"
-            className="text-lg px-8 py-6 bg-background text-foreground border-2 border-background hover:bg-background/90"
+            className="w-full md:w-auto text-lg px-8 py-6 bg-background text-foreground border-2 border-background hover:bg-background/90"
             onClick={() => window.open('https://t.me/+X_fIDkDLb3EzNzBi', '_blank')}
           >
             Хочу участвовать
@@ -381,32 +388,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Footer */}
       <footer id="contacts" className="py-12 px-4 border-t border-border">
         <div className="container mx-auto max-w-4xl">
-          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <h3 className="font-bold text-xl mb-4">🔮 ПОРТАЛ</h3>
               <p className="text-muted-foreground">Марафон перехода на следующий уровень</p>
             </div>
             <div>
               <h4 className="font-semibold mb-3">Контакты</h4>
-              <a href="https://t.me/voroshilinaella" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-2">
-                <Icon name="Send" size={20} />
-                <span>Telegram: @voroshilinaella</span>
-              </a>
-              <a href="mailto:voroshilina.ru@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                <Icon name="Mail" size={20} />
-                <span>Email: voroshilina.ru@gmail.com</span>
-              </a>
+              <a href="https://t.me/voroshilinaella" className="block text-primary hover:underline">@voroshilinaella</a>
+              <a href="https://t.me/elena_bulan" className="block text-primary hover:underline">@elena_bulan</a>
             </div>
             <div>
               <h4 className="font-semibold mb-3">Дата</h4>
               <p className="text-muted-foreground">Старт: 24 марта 2026</p>
               <p className="text-muted-foreground">Длительность: 3 дня</p>
             </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
-            <p>© 2026 ПОРТАЛ. Все права защищены.</p>
           </div>
         </div>
       </footer>
