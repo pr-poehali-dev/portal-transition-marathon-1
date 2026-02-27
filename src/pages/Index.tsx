@@ -342,26 +342,6 @@ const Index = () => {
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">ОТЗЫВЫ УЧАСТНИКОВ</h2>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 flex flex-col h-full">
-                  <div className="flex-1">
-                    <p className="text-lg mb-4 italic">"{testimonial.text}"</p>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-border">
-                    <p className="font-bold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground mb-2">{testimonial.role}</p>
-                    <div className="bg-primary/10 rounded px-3 py-2 inline-block">
-                      <p className="text-sm font-semibold text-primary">{testimonial.result}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <h3 className="text-2xl font-semibold mb-8 text-center text-muted-foreground">Скриншоты из Telegram-канала</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               "https://cdn.poehali.dev/projects/abf352d4-79da-4b58-b2f2-a0469ff33b8a/bucket/e93cf2b8-1a52-4b9e-a393-d8e22bc601cf.png",
