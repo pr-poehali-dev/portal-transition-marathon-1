@@ -342,7 +342,7 @@ const Index = () => {
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">ОТЗЫВЫ УЧАСТНИКОВ</h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 flex flex-col h-full">
@@ -358,6 +358,19 @@ const Index = () => {
                   </div>
                 </CardContent>
               </Card>
+            ))}
+          </div>
+
+          <h3 className="text-2xl font-semibold mb-8 text-center text-muted-foreground">Скриншоты из Telegram-канала</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              "https://cdn.poehali.dev/projects/abf352d4-79da-4b58-b2f2-a0469ff33b8a/bucket/e93cf2b8-1a52-4b9e-a393-d8e22bc601cf.png",
+              "https://cdn.poehali.dev/projects/abf352d4-79da-4b58-b2f2-a0469ff33b8a/bucket/b1606b0a-b881-4faf-98d7-77e702f3a208.png",
+              "https://cdn.poehali.dev/projects/abf352d4-79da-4b58-b2f2-a0469ff33b8a/bucket/676653e9-a8fa-4bad-ba49-ebe420674c9f.png"
+            ].map((url, i) => (
+              <div key={i} className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img src={url} alt={`Отзыв участницы ${i + 1}`} className="w-full h-auto object-cover" />
+              </div>
             ))}
           </div>
         </div>
